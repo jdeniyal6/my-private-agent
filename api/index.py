@@ -66,3 +66,8 @@ def chat():
 @app.route('/<path:path>')
 def catch_all(path):
     return jsonify({"status": "Backend is online"})
+# कोड के बिल्कुल नीचे यह होना चाहिए ताकि वर्सेल इसे रन कर सके
+app_obj = app
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
